@@ -1,0 +1,111 @@
+/* Samiat Ololade — warm-dark by default (candlelit room), cream variant for light-mode users. */
+:root {
+  --bg: #170d0b;
+  --bg-raised: #221310;
+  --bg-deep: #0f0807;
+  --ink: #f3e6d3;
+  --ink-soft: #cdb8a0;
+  --ink-faint: #9a8470;
+  --line: rgba(243, 230, 211, 0.14);
+
+  --clay: #c2603a;        /* burnt clay / terracotta — primary */
+  --clay-strong: #d9744b;
+  --clay-ink: #1b0d08;
+  --wine: #5c1626;        /* deep wine — cocktails & date night */
+  --wine-deep: #3a0d18;
+  --gold: #e0ad4f;        /* candlelight */
+  --gold-soft: rgba(224, 173, 79, 0.16);
+
+  --plate: #efe4d6;       /* frame colour behind studio food shots */
+
+  --font-display: "Spectral", Georgia, serif;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
+
+  --gutter: clamp(16px, 4.5vw, 56px);
+  --max: 1240px;
+  --radius: 2px;
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f4e9dc;
+    --bg-raised: #ecdecd;
+    --bg-deep: #e6d5c1;
+    --ink: #2a1410;
+    --ink-soft: #5b3f33;
+    --ink-faint: #876a5a;
+    --line: rgba(42, 20, 16, 0.16);
+
+    --clay: #a8471f;
+    --clay-strong: #b8522a;
+    --clay-ink: #fff6ec;
+    --gold: #9a6a16;
+    --gold-soft: rgba(154, 106, 22, 0.14);
+    --plate: #fbf5ec;
+
+    color-scheme: light;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ol,
+ul {
+  margin: 0;
+}
+
+::selection {
+  background: var(--clay);
+  color: var(--clay-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
